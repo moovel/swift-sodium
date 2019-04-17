@@ -128,12 +128,7 @@ public class SecretStream {
             }
 
             private func free() {
-                guard let state = state else {
-                    return
-                }
-                let rawState = UnsafeMutableRawPointer(state).bindMemory(to: UInt8.self, capacity: crypto_secretstream_xchacha20poly1305_statebytes())
-                rawState.deallocate(capacity: 1)
-                self.state = nil
+                sodium_free(state)
             }
 
             deinit {
@@ -203,12 +198,7 @@ public class SecretStream {
             }
 
             private func free() {
-                guard let state = state else {
-                    return
-                }
-                let rawState = UnsafeMutableRawPointer(state).bindMemory(to: UInt8.self, capacity: crypto_secretstream_xchacha20poly1305_statebytes())
-                rawState.deallocate(capacity: 1)
-                self.state = nil
+                sodium_free(state)
             }
 
             deinit {
