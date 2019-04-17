@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'Sodium'
-s.version = '0.6'
+s.version = '0.6.2'
 s.license = { :type => "ISC", :file => 'LICENSE' }
 s.summary = 'Swift-Sodium provides a safe and easy to use interface to perform common cryptographic operations on iOS and OSX.'
 s.homepage = 'https://github.com/jedisct1/swift-sodium'
